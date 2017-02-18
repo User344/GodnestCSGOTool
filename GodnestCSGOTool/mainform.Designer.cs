@@ -235,7 +235,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(841, 20);
             this.label4.TabIndex = 32;
-            this.label4.Text = "Статус";
+            this.label4.Text = "Status";
             // 
             // materialRaisedButton8
             // 
@@ -259,7 +259,7 @@
             this.launchsteam.Primary = true;
             this.launchsteam.Size = new System.Drawing.Size(123, 47);
             this.launchsteam.TabIndex = 8;
-            this.launchsteam.Text = "Запустить Steam";
+            this.launchsteam.Text = "Start Steam";
             this.launchsteam.UseVisualStyleBackColor = true;
             this.launchsteam.Click += new System.EventHandler(this.materialRaisedButton6_Click);
             // 
@@ -272,7 +272,7 @@
             this.launchcsgo.Primary = true;
             this.launchcsgo.Size = new System.Drawing.Size(123, 47);
             this.launchcsgo.TabIndex = 7;
-            this.launchcsgo.Text = "Запустить CS:GO";
+            this.launchcsgo.Text = "Start CS:GO";
             this.launchcsgo.UseVisualStyleBackColor = true;
             this.launchcsgo.Click += new System.EventHandler(this.materialRaisedButton6_Click);
             // 
@@ -285,7 +285,7 @@
             this.button1.Primary = true;
             this.button1.Size = new System.Drawing.Size(123, 39);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Проверить отлегу";
+            this.button1.Text = "Check for OW delay";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.materialRaisedButton5_Click);
             // 
@@ -349,7 +349,7 @@
             this.materialRaisedButton34.Primary = true;
             this.materialRaisedButton34.Size = new System.Drawing.Size(135, 29);
             this.materialRaisedButton34.TabIndex = 94;
-            this.materialRaisedButton34.Text = "Путь стимидов";
+            this.materialRaisedButton34.Text = "SteamID Path";
             this.materialRaisedButton34.UseVisualStyleBackColor = true;
             this.materialRaisedButton34.Click += new System.EventHandler(this.materialRaisedButton34_Click);
             // 
@@ -364,7 +364,7 @@
             this.materialRaisedButton33.Primary = true;
             this.materialRaisedButton33.Size = new System.Drawing.Size(135, 29);
             this.materialRaisedButton33.TabIndex = 93;
-            this.materialRaisedButton33.Text = "Путь статуса";
+            this.materialRaisedButton33.Text = "Status Path";
             this.materialRaisedButton33.UseVisualStyleBackColor = true;
             this.materialRaisedButton33.Click += new System.EventHandler(this.materialRaisedButton33_Click);
             // 
@@ -377,7 +377,7 @@
             this.materialRaisedButton5.Primary = true;
             this.materialRaisedButton5.Size = new System.Drawing.Size(231, 20);
             this.materialRaisedButton5.TabIndex = 40;
-            this.materialRaisedButton5.Text = "Проверить Аккаунты";
+            this.materialRaisedButton5.Text = "Check Accounts";
             this.materialRaisedButton5.UseVisualStyleBackColor = true;
             this.materialRaisedButton5.Click += new System.EventHandler(this.materialRaisedButton5_Click_1);
             // 
@@ -400,7 +400,7 @@
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(231, 25);
             this.materialLabel1.TabIndex = 38;
-            this.materialLabel1.Text = "Постоянная почта";
+            this.materialLabel1.Text = "Mail";
             this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // materialRaisedButton16
@@ -412,7 +412,7 @@
             this.materialRaisedButton16.Primary = true;
             this.materialRaisedButton16.Size = new System.Drawing.Size(231, 20);
             this.materialRaisedButton16.TabIndex = 37;
-            this.materialRaisedButton16.Text = "Указать путь до Стима";
+            this.materialRaisedButton16.Text = "Path to steam";
             this.materialRaisedButton16.UseVisualStyleBackColor = true;
             this.materialRaisedButton16.Click += new System.EventHandler(this.materialRaisedButton16_Click);
             // 
@@ -425,7 +425,7 @@
             this.materialRaisedButton15.Primary = true;
             this.materialRaisedButton15.Size = new System.Drawing.Size(231, 20);
             this.materialRaisedButton15.TabIndex = 36;
-            this.materialRaisedButton15.Text = "Удалить почту";
+            this.materialRaisedButton15.Text = "Remove mail";
             this.materialRaisedButton15.UseVisualStyleBackColor = true;
             this.materialRaisedButton15.Click += new System.EventHandler(this.materialRaisedButton15_Click);
             // 
@@ -438,7 +438,7 @@
             this.materialRaisedButton14.Primary = true;
             this.materialRaisedButton14.Size = new System.Drawing.Size(231, 20);
             this.materialRaisedButton14.TabIndex = 35;
-            this.materialRaisedButton14.Text = "Проверить и применить";
+            this.materialRaisedButton14.Text = "Check and apply";
             this.materialRaisedButton14.UseVisualStyleBackColor = true;
             this.materialRaisedButton14.Click += new System.EventHandler(this.materialRaisedButton14_Click);
             // 
@@ -470,7 +470,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(231, 20);
             this.textBox7.TabIndex = 32;
-            this.textBox7.Text = "Пароль от почты";
+            this.textBox7.Text = "Mail password";
             // 
             // textBox3
             // 
@@ -479,7 +479,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(231, 20);
             this.textBox3.TabIndex = 31;
-            this.textBox3.Text = "Логин от почты";
+            this.textBox3.Text = "Mail login";
             // 
             // textBox6
             // 
@@ -497,7 +497,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(231, 20);
             this.textBox5.TabIndex = 22;
-            this.textBox5.Text = "Пароль от почты";
+            this.textBox5.Text = "Mail password";
             // 
             // textBox4
             // 
@@ -506,7 +506,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(231, 20);
             this.textBox4.TabIndex = 21;
-            this.textBox4.Text = "Логин от почты";
+            this.textBox4.Text = "Mail login";
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox2
@@ -516,7 +516,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(231, 20);
             this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "Пароль";
+            this.textBox2.Text = "Password";
             // 
             // textBox1
             // 
@@ -525,7 +525,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(231, 20);
             this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "Логин";
+            this.textBox1.Text = "Login";
             // 
             // label3
             // 
@@ -535,7 +535,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(574, 20);
             this.label3.TabIndex = 30;
-            this.label3.Text = "Статус";
+            this.label3.Text = "Status";
             // 
             // materialLabel3
             // 
@@ -548,7 +548,7 @@
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(166, 19);
             this.materialLabel3.TabIndex = 29;
-            this.materialLabel3.Text = "Не используються =";
+            this.materialLabel3.Text = "Not using =";
             // 
             // materialLabel2
             // 
@@ -561,7 +561,7 @@
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(166, 19);
             this.materialLabel2.TabIndex = 28;
-            this.materialLabel2.Text = "Используются =";
+            this.materialLabel2.Text = "Using =";
             // 
             // materialRaisedButton4
             // 
@@ -572,7 +572,7 @@
             this.materialRaisedButton4.Primary = true;
             this.materialRaisedButton4.Size = new System.Drawing.Size(231, 20);
             this.materialRaisedButton4.TabIndex = 27;
-            this.materialRaisedButton4.Text = "Удалить";
+            this.materialRaisedButton4.Text = "Remove";
             this.materialRaisedButton4.UseVisualStyleBackColor = true;
             this.materialRaisedButton4.Click += new System.EventHandler(this.materialRaisedButton4_Click);
             // 
@@ -585,7 +585,7 @@
             this.materialRaisedButton3.Primary = true;
             this.materialRaisedButton3.Size = new System.Drawing.Size(231, 20);
             this.materialRaisedButton3.TabIndex = 26;
-            this.materialRaisedButton3.Text = "Добавить";
+            this.materialRaisedButton3.Text = "Add";
             this.materialRaisedButton3.UseVisualStyleBackColor = true;
             this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
             // 
@@ -598,7 +598,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(53, 17);
             this.checkBox1.TabIndex = 25;
-            this.checkBox1.Text = "Почта";
+            this.checkBox1.Text = "Mail";
             this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // checkBox3
@@ -622,7 +622,7 @@
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(115, 17);
             this.checkBox2.TabIndex = 20;
-            this.checkBox2.Text = "Постоянная почта";
+            this.checkBox2.Text = "Mail";
             this.checkBox2.UseVisualStyleBackColor = false;
             // 
             // materialRaisedButton2
@@ -690,7 +690,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(841, 20);
             this.label1.TabIndex = 31;
-            this.label1.Text = "Статус";
+            this.label1.Text = "Status";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // materialRaisedButton6
@@ -702,7 +702,7 @@
             this.materialRaisedButton6.Primary = true;
             this.materialRaisedButton6.Size = new System.Drawing.Size(131, 39);
             this.materialRaisedButton6.TabIndex = 9;
-            this.materialRaisedButton6.Text = "Обнулить таймер";
+            this.materialRaisedButton6.Text = "Reset timer";
             this.materialRaisedButton6.UseVisualStyleBackColor = true;
             this.materialRaisedButton6.Click += new System.EventHandler(this.materialRaisedButton6_Click_1);
             // 
@@ -728,7 +728,7 @@
             this.materialRaisedButton9.Primary = true;
             this.materialRaisedButton9.Size = new System.Drawing.Size(131, 39);
             this.materialRaisedButton9.TabIndex = 7;
-            this.materialRaisedButton9.Text = "Репортботнуть";
+            this.materialRaisedButton9.Text = "Report with bots";
             this.materialRaisedButton9.UseVisualStyleBackColor = true;
             this.materialRaisedButton9.Click += new System.EventHandler(this.materialRaisedButton9_Click);
             // 
@@ -766,7 +766,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(841, 20);
             this.label2.TabIndex = 32;
-            this.label2.Text = "Статус";
+            this.label2.Text = "Status";
             // 
             // materialRaisedButton7
             // 
@@ -777,7 +777,7 @@
             this.materialRaisedButton7.Primary = true;
             this.materialRaisedButton7.Size = new System.Drawing.Size(131, 39);
             this.materialRaisedButton7.TabIndex = 10;
-            this.materialRaisedButton7.Text = "Обнулить таймер";
+            this.materialRaisedButton7.Text = "Reset timer";
             this.materialRaisedButton7.UseVisualStyleBackColor = true;
             this.materialRaisedButton7.Click += new System.EventHandler(this.materialRaisedButton7_Click_1);
             // 
@@ -804,7 +804,7 @@
             this.materialRaisedButton12.Primary = true;
             this.materialRaisedButton12.Size = new System.Drawing.Size(131, 39);
             this.materialRaisedButton12.TabIndex = 8;
-            this.materialRaisedButton12.Text = "Лайкнуть";
+            this.materialRaisedButton12.Text = "Like";
             this.materialRaisedButton12.UseVisualStyleBackColor = true;
             this.materialRaisedButton12.Click += new System.EventHandler(this.materialRaisedButton12_Click);
             // 
@@ -871,7 +871,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(65, 23);
             this.button9.TabIndex = 61;
-            this.button9.Text = "Тест";
+            this.button9.Text = "Test";
             this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click_1);
@@ -887,7 +887,7 @@
             this.materialRaisedButton36.Primary = true;
             this.materialRaisedButton36.Size = new System.Drawing.Size(131, 39);
             this.materialRaisedButton36.TabIndex = 59;
-            this.materialRaisedButton36.Text = "Слушать";
+            this.materialRaisedButton36.Text = "Listen";
             this.materialRaisedButton36.UseVisualStyleBackColor = true;
             this.materialRaisedButton36.Click += new System.EventHandler(this.materialRaisedButton36_Click);
             // 
@@ -899,7 +899,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(108, 22);
             this.button6.TabIndex = 56;
-            this.button6.Text = "Открыть профиль";
+            this.button6.Text = "Open profile";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -911,7 +911,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(65, 23);
             this.button5.TabIndex = 55;
-            this.button5.Text = "Всем";
+            this.button5.Text = "All";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -927,7 +927,7 @@
             this.materialRaisedButton28.Primary = true;
             this.materialRaisedButton28.Size = new System.Drawing.Size(131, 39);
             this.materialRaisedButton28.TabIndex = 53;
-            this.materialRaisedButton28.Text = "Проверить на нахлебов";
+            this.materialRaisedButton28.Text = "Check for freeloader";
             this.materialRaisedButton28.UseVisualStyleBackColor = true;
             this.materialRaisedButton28.Click += new System.EventHandler(this.materialRaisedButton28_Click);
             // 
@@ -938,7 +938,7 @@
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(57, 21);
             this.checkBox6.TabIndex = 52;
-            this.checkBox6.Text = "Краш";
+            this.checkBox6.Text = "Crash";
             this.checkBox6.UseVisualStyleBackColor = false;
             // 
             // checkBox5
@@ -948,7 +948,7 @@
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(57, 20);
             this.checkBox5.TabIndex = 51;
-            this.checkBox5.Text = "Кик";
+            this.checkBox5.Text = "Kick";
             this.checkBox5.UseVisualStyleBackColor = false;
             // 
             // listBox8
@@ -978,7 +978,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(108, 23);
             this.button3.TabIndex = 43;
-            this.button3.Text = "Кикнуть";
+            this.button3.Text = "Kick";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -989,7 +989,7 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(131, 20);
             this.textBox16.TabIndex = 41;
-            this.textBox16.Text = "СПАМ";
+            this.textBox16.Text = "SPAM";
             // 
             // textBox15
             // 
@@ -1027,7 +1027,7 @@
             this.materialRaisedButton20.Primary = true;
             this.materialRaisedButton20.Size = new System.Drawing.Size(131, 39);
             this.materialRaisedButton20.TabIndex = 36;
-            this.materialRaisedButton20.Text = "Зайти в лобби";
+            this.materialRaisedButton20.Text = "Join lobby";
             this.materialRaisedButton20.UseVisualStyleBackColor = true;
             this.materialRaisedButton20.Click += new System.EventHandler(this.materialRaisedButton20_Click);
             // 
@@ -1039,7 +1039,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(706, 20);
             this.label7.TabIndex = 33;
-            this.label7.Text = "Статус";
+            this.label7.Text = "Status";
             // 
             // button2
             // 
@@ -1047,7 +1047,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(84, 20);
             this.button2.TabIndex = 24;
-            this.button2.Text = "Отправить";
+            this.button2.Text = "Send";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -1058,7 +1058,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(616, 20);
             this.textBox14.TabIndex = 23;
-            this.textBox14.Text = "Сообщение";
+            this.textBox14.Text = "Message";
             // 
             // label6
             // 
@@ -1069,7 +1069,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(181, 68);
             this.label6.TabIndex = 22;
-            this.label6.Text = "Статус поиска:";
+            this.label6.Text = "Searching status:";
             // 
             // materialRaisedButton18
             // 
@@ -1081,7 +1081,7 @@
             this.materialRaisedButton18.Primary = true;
             this.materialRaisedButton18.Size = new System.Drawing.Size(131, 20);
             this.materialRaisedButton18.TabIndex = 21;
-            this.materialRaisedButton18.Text = "Спам";
+            this.materialRaisedButton18.Text = "Spam";
             this.materialRaisedButton18.UseVisualStyleBackColor = true;
             this.materialRaisedButton18.Click += new System.EventHandler(this.materialRaisedButton18_Click);
             // 
@@ -1095,7 +1095,7 @@
             this.materialRaisedButton17.Primary = true;
             this.materialRaisedButton17.Size = new System.Drawing.Size(131, 39);
             this.materialRaisedButton17.TabIndex = 20;
-            this.materialRaisedButton17.Text = "Крашнуть лобби";
+            this.materialRaisedButton17.Text = "Crash lobby";
             this.materialRaisedButton17.UseVisualStyleBackColor = true;
             this.materialRaisedButton17.Click += new System.EventHandler(this.materialRaisedButton17_Click);
             // 
@@ -1175,7 +1175,7 @@
             this.materialRaisedButton11.Primary = true;
             this.materialRaisedButton11.Size = new System.Drawing.Size(131, 39);
             this.materialRaisedButton11.TabIndex = 9;
-            this.materialRaisedButton11.Text = "Подключиться";
+            this.materialRaisedButton11.Text = "Connect";
             this.materialRaisedButton11.UseVisualStyleBackColor = true;
             this.materialRaisedButton11.Click += new System.EventHandler(this.materialRaisedButton11_Click);
             // 
@@ -1250,7 +1250,7 @@
             this.materialRaisedButton39.Primary = true;
             this.materialRaisedButton39.Size = new System.Drawing.Size(245, 69);
             this.materialRaisedButton39.TabIndex = 101;
-            this.materialRaisedButton39.Text = "СКАН ВСЕГО И ЗАПИСЬ";
+            this.materialRaisedButton39.Text = "SCAN AND WRITING";
             this.materialRaisedButton39.UseVisualStyleBackColor = true;
             this.materialRaisedButton39.Click += new System.EventHandler(this.materialRaisedButton39_Click);
             // 
@@ -1281,7 +1281,7 @@
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(246, 22);
             this.label17.TabIndex = 98;
-            this.label17.Text = "Отправил";
+            this.label17.Text = "Sended";
             // 
             // checkBox16
             // 
@@ -1291,7 +1291,7 @@
             this.checkBox16.Name = "checkBox16";
             this.checkBox16.Size = new System.Drawing.Size(88, 17);
             this.checkBox16.TabIndex = 97;
-            this.checkBox16.Text = "Собирать ID";
+            this.checkBox16.Text = "Collect ID";
             this.checkBox16.UseVisualStyleBackColor = false;
             // 
             // checkBox15
@@ -1325,7 +1325,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(246, 22);
             this.label16.TabIndex = 94;
-            this.label16.Text = "Крашнуто";
+            this.label16.Text = "Crashed";
             // 
             // checkBox13
             // 
@@ -1335,7 +1335,7 @@
             this.checkBox13.Name = "checkBox13";
             this.checkBox13.Size = new System.Drawing.Size(85, 17);
             this.checkBox13.TabIndex = 93;
-            this.checkBox13.Text = "Спам в LAC";
+            this.checkBox13.Text = "Spam in LAC";
             this.checkBox13.UseVisualStyleBackColor = false;
             // 
             // checkBox12
@@ -1346,7 +1346,7 @@
             this.checkBox12.Name = "checkBox12";
             this.checkBox12.Size = new System.Drawing.Size(53, 17);
             this.checkBox12.TabIndex = 92;
-            this.checkBox12.Text = "Спам";
+            this.checkBox12.Text = "Spam";
             this.checkBox12.UseVisualStyleBackColor = false;
             this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
             // 
@@ -1390,7 +1390,7 @@
             this.checkBox11.Name = "checkBox11";
             this.checkBox11.Size = new System.Drawing.Size(71, 17);
             this.checkBox11.TabIndex = 88;
-            this.checkBox11.Text = "Нахлебы";
+            this.checkBox11.Text = "Freeloaders";
             this.checkBox11.UseVisualStyleBackColor = false;
             // 
             // checkBox7
@@ -1401,7 +1401,7 @@
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(83, 17);
             this.checkBox7.TabIndex = 87;
-            this.checkBox7.Text = "Ненахлебы";
+            this.checkBox7.Text = "Freeloaders";
             this.checkBox7.UseVisualStyleBackColor = false;
             // 
             // label15
@@ -1412,7 +1412,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(134, 20);
             this.label15.TabIndex = 86;
-            this.label15.Text = "Забанено:";
+            this.label15.Text = "Banned:";
             // 
             // label14
             // 
@@ -1422,7 +1422,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(134, 20);
             this.label14.TabIndex = 85;
-            this.label14.Text = "Проверено:";
+            this.label14.Text = "Checked:";
             // 
             // materialRaisedButton32
             // 
@@ -1435,7 +1435,7 @@
             this.materialRaisedButton32.Primary = true;
             this.materialRaisedButton32.Size = new System.Drawing.Size(134, 20);
             this.materialRaisedButton32.TabIndex = 84;
-            this.materialRaisedButton32.Text = "Проверить список";
+            this.materialRaisedButton32.Text = "Check list";
             this.materialRaisedButton32.UseVisualStyleBackColor = true;
             this.materialRaisedButton32.Click += new System.EventHandler(this.materialRaisedButton32_Click);
             // 
@@ -1448,7 +1448,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(246, 22);
             this.label13.TabIndex = 83;
-            this.label13.Text = "Зашел";
+            this.label13.Text = "Joined";
             // 
             // materialRaisedButton31
             // 
@@ -1461,7 +1461,7 @@
             this.materialRaisedButton31.Primary = true;
             this.materialRaisedButton31.Size = new System.Drawing.Size(135, 42);
             this.materialRaisedButton31.TabIndex = 80;
-            this.materialRaisedButton31.Text = "Искать в лобби";
+            this.materialRaisedButton31.Text = "Search in lobby";
             this.materialRaisedButton31.UseVisualStyleBackColor = true;
             this.materialRaisedButton31.Click += new System.EventHandler(this.materialRaisedButton31_Click);
             // 
@@ -1504,7 +1504,7 @@
             this.materialRaisedButton30.Primary = true;
             this.materialRaisedButton30.Size = new System.Drawing.Size(135, 20);
             this.materialRaisedButton30.TabIndex = 76;
-            this.materialRaisedButton30.Text = "Удалить";
+            this.materialRaisedButton30.Text = "Remove";
             this.materialRaisedButton30.UseVisualStyleBackColor = true;
             this.materialRaisedButton30.Click += new System.EventHandler(this.materialRaisedButton30_Click);
             // 
@@ -1519,7 +1519,7 @@
             this.materialRaisedButton29.Primary = true;
             this.materialRaisedButton29.Size = new System.Drawing.Size(135, 20);
             this.materialRaisedButton29.TabIndex = 75;
-            this.materialRaisedButton29.Text = "Добавить";
+            this.materialRaisedButton29.Text = "Add";
             this.materialRaisedButton29.UseVisualStyleBackColor = true;
             this.materialRaisedButton29.Click += new System.EventHandler(this.materialRaisedButton29_Click);
             // 
@@ -1550,7 +1550,7 @@
             this.materialRaisedButton27.Primary = true;
             this.materialRaisedButton27.Size = new System.Drawing.Size(135, 20);
             this.materialRaisedButton27.TabIndex = 72;
-            this.materialRaisedButton27.Text = "Удалить";
+            this.materialRaisedButton27.Text = "Remove";
             this.materialRaisedButton27.UseVisualStyleBackColor = true;
             this.materialRaisedButton27.Click += new System.EventHandler(this.materialRaisedButton27_Click);
             // 
@@ -1565,7 +1565,7 @@
             this.materialRaisedButton26.Primary = true;
             this.materialRaisedButton26.Size = new System.Drawing.Size(135, 20);
             this.materialRaisedButton26.TabIndex = 71;
-            this.materialRaisedButton26.Text = "Добавить";
+            this.materialRaisedButton26.Text = "Add";
             this.materialRaisedButton26.UseVisualStyleBackColor = true;
             this.materialRaisedButton26.Click += new System.EventHandler(this.materialRaisedButton26_Click);
             // 
@@ -1588,7 +1588,7 @@
             this.materialRaisedButton25.Primary = true;
             this.materialRaisedButton25.Size = new System.Drawing.Size(844, 19);
             this.materialRaisedButton25.TabIndex = 69;
-            this.materialRaisedButton25.Text = "Подключиться";
+            this.materialRaisedButton25.Text = "Connect";
             this.materialRaisedButton25.UseVisualStyleBackColor = true;
             this.materialRaisedButton25.Click += new System.EventHandler(this.materialRaisedButton25_Click);
             // 
@@ -1603,7 +1603,7 @@
             this.materialRaisedButton24.Primary = true;
             this.materialRaisedButton24.Size = new System.Drawing.Size(120, 39);
             this.materialRaisedButton24.TabIndex = 68;
-            this.materialRaisedButton24.Text = "Крашить Бомжей";
+            this.materialRaisedButton24.Text = "Crash";
             this.materialRaisedButton24.UseVisualStyleBackColor = true;
             this.materialRaisedButton24.Click += new System.EventHandler(this.materialRaisedButton24_Click);
             // 
@@ -1618,7 +1618,7 @@
             this.materialRaisedButton23.Primary = true;
             this.materialRaisedButton23.Size = new System.Drawing.Size(120, 20);
             this.materialRaisedButton23.TabIndex = 67;
-            this.materialRaisedButton23.Text = "Добавить";
+            this.materialRaisedButton23.Text = "Add";
             this.materialRaisedButton23.UseVisualStyleBackColor = true;
             this.materialRaisedButton23.Click += new System.EventHandler(this.materialRaisedButton23_Click);
             // 
@@ -1636,7 +1636,7 @@
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(120, 20);
             this.textBox19.TabIndex = 65;
-            this.textBox19.Text = "Ссылка на профиль";
+            this.textBox19.Text = "Link to profile";
             // 
             // textBox18
             // 
@@ -1644,7 +1644,7 @@
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(135, 20);
             this.textBox18.TabIndex = 64;
-            this.textBox18.Text = "Сообщение при входе";
+            this.textBox18.Text = "Message on join";
             // 
             // label10
             // 
@@ -1654,7 +1654,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(246, 20);
             this.label10.TabIndex = 63;
-            this.label10.Text = "Бомжей кикнуто:";
+            this.label10.Text = "Kicked:";
             // 
             // label9
             // 
@@ -1664,7 +1664,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(246, 20);
             this.label9.TabIndex = 62;
-            this.label9.Text = "Лобби крашнуто:";
+            this.label9.Text = "Lobby crashed:";
             // 
             // label8
             // 
@@ -1674,7 +1674,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(246, 20);
             this.label8.TabIndex = 61;
-            this.label8.Text = "SteamID\'шников записано:";
+            this.label8.Text = "Writed SteamID:";
             // 
             // materialRaisedButton22
             // 
@@ -1687,7 +1687,7 @@
             this.materialRaisedButton22.Primary = true;
             this.materialRaisedButton22.Size = new System.Drawing.Size(246, 20);
             this.materialRaisedButton22.TabIndex = 59;
-            this.materialRaisedButton22.Text = "Добавить";
+            this.materialRaisedButton22.Text = "Add";
             this.materialRaisedButton22.UseVisualStyleBackColor = true;
             this.materialRaisedButton22.Click += new System.EventHandler(this.materialRaisedButton22_Click);
             // 
@@ -1697,7 +1697,7 @@
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(120, 20);
             this.textBox17.TabIndex = 58;
-            this.textBox17.Text = "id паблика";
+            this.textBox17.Text = "VK group ID:";
             // 
             // listBox10
             // 
@@ -1715,7 +1715,7 @@
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(95, 17);
             this.checkBox8.TabIndex = 56;
-            this.checkBox8.Text = "Забить лобби";
+            this.checkBox8.Text = "Fill lobby";
             this.checkBox8.UseVisualStyleBackColor = false;
             // 
             // checkBox9
@@ -1726,7 +1726,7 @@
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(80, 17);
             this.checkBox9.TabIndex = 55;
-            this.checkBox9.Text = "Авто Краш";
+            this.checkBox9.Text = "Auto Crash";
             this.checkBox9.UseVisualStyleBackColor = false;
             // 
             // checkBox10
@@ -1737,7 +1737,7 @@
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(69, 17);
             this.checkBox10.TabIndex = 54;
-            this.checkBox10.Text = "АвтоКик";
+            this.checkBox10.Text = "Auto Kick";
             this.checkBox10.UseVisualStyleBackColor = false;
             // 
             // materialRaisedButton21
@@ -1751,7 +1751,7 @@
             this.materialRaisedButton21.Primary = true;
             this.materialRaisedButton21.Size = new System.Drawing.Size(135, 39);
             this.materialRaisedButton21.TabIndex = 36;
-            this.materialRaisedButton21.Text = "Разъебать Нахуй";
+            this.materialRaisedButton21.Text = "FUCK IT UP";
             this.materialRaisedButton21.UseVisualStyleBackColor = true;
             this.materialRaisedButton21.Click += new System.EventHandler(this.materialRaisedButton21_Click);
             // 
@@ -1766,7 +1766,7 @@
             this.materialRaisedButton19.Primary = true;
             this.materialRaisedButton19.Size = new System.Drawing.Size(120, 34);
             this.materialRaisedButton19.TabIndex = 35;
-            this.materialRaisedButton19.Text = "Начать патруль";
+            this.materialRaisedButton19.Text = "Start Overwatch";
             this.materialRaisedButton19.UseVisualStyleBackColor = true;
             this.materialRaisedButton19.Click += new System.EventHandler(this.materialRaisedButton19_Click_1);
             // 
@@ -1778,7 +1778,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(844, 20);
             this.label5.TabIndex = 34;
-            this.label5.Text = "Статус";
+            this.label5.Text = "Status";
             // 
             // listBox9
             // 

@@ -268,7 +268,7 @@ namespace GodnestCSGOTool
                     findlobbyid++;
                     if (deadlobbys.Contains(Convert.ToString(findlobbyid)) != true)
                     {
-                        statusteam = "Проверяю:" + findlobbyid;
+                        statusteam = "Checking:" + findlobbyid;
                         if (Handler.badlobbys.Contains(Convert.ToString(findlobbyid)) != true)
                         {
                             Handler.badlobbys = Handler.badlobbys + Convert.ToString(findlobbyid);
@@ -329,7 +329,7 @@ namespace GodnestCSGOTool
                     findlobbyid++;
                     if (deadlobbys.Contains(Convert.ToString(findlobbyid)) != true)
                     {
-                        statusteam = "Проверяю:" + findlobbyid;
+                        statusteam = "Checking:" + findlobbyid;
                         if (Handler.badlobbys.Contains(Convert.ToString(findlobbyid)) != true)
                         {
                             Handler.badlobbys = Handler.badlobbys + Convert.ToString(findlobbyid);
@@ -379,7 +379,7 @@ namespace GodnestCSGOTool
                 {
                     if (deadlobbys.Contains(Convert.ToString(findlobbyid)) != true)
                     {
-                        statusteam = "Проверяю:" + findlobbyid;
+                        statusteam = "Checking:" + findlobbyid;
                         if (Handler.badlobbys.Contains(Convert.ToString(findlobbyid)) != true)
                         {
                             Handler.badlobbys = Handler.badlobbys + Convert.ToString(findlobbyid);
@@ -432,7 +432,7 @@ namespace GodnestCSGOTool
                     }
                     i = 0;
                 }
-                statusteam = "Проверяю:" + findlobbyid;
+                statusteam = "Checking:" + findlobbyid;
                 Handler.sendjoins++;
                 Task.Run(() => _handler.JoinLobby(findlobbyid));
                 Thread.Sleep(1);
@@ -447,7 +447,7 @@ namespace GodnestCSGOTool
                 string[] vkpubs = File.ReadAllLines("vkpublics.txt");
                 for (int i = 0; i <= vkpubs.Count() - 1; i++)
                 {
-                    statusteam = "Скачиваю лобби с " + vkpubs[i].ToString() + "...";
+                    statusteam = "Downloading lobbies from " + vkpubs[i].ToString() + "...";
                     notmuchlobbys = "itsnotempty";
                     WebClient client = new WebClient();
                     if (File.ReadAllText("accestoken.txt") != null)
@@ -455,7 +455,7 @@ namespace GodnestCSGOTool
                         string wall = client.DownloadString("https://api.vk.com/api.php?oauth=1&method=wall.get&extended=0&owner_id=" + vkpubs[i].ToString() + "&v=5.62&filter=all&count=100&access_token=" + File.ReadAllText("accestoken.txt"));
                         if (wall.Contains("User authorization failed") == true)
                         {
-                            statusteam = "Ключ истек";
+                            statusteam = "Key expired";
                             Thread.Sleep(20000);
                         }
                         else
@@ -487,22 +487,22 @@ namespace GodnestCSGOTool
                                             if (besedka.Contains(Convert.ToString(lobbyID)) != true)
                                             {
                                                 Task.Run(() => _handler.JoinLobby(lobbyID));
-                                                statusteam = "Подключаюсь:" + lobbyID;
+                                                statusteam = "Connecting:" + lobbyID;
                                                 Thread.Sleep(500);
                                                 if (mainform.autokick == true)
                                                 {
                                                     howmucrashed = howmucrashed + 1;
-                                                    statusteam = "Кикаю...";
+                                                    statusteam = "Kicking...";
                                                 }
                                                 if (mainform.autocrash == true)
                                                 {
                                                     howmucrashed = howmucrashed + 1;
-                                                    statusteam = "Крашу...";
+                                                    statusteam = "Crashing...";
                                                 }
                                                 if (mainform.nonkickablebots == true)
                                                 {
                                                     howmucrashed = howmucrashed + 1;
-                                                    statusteam = "Забиваю...";
+                                                    statusteam = "Filling...";
                                                 }
                                                 int di = 0;
                                                 while (Handler.imdone != true)
@@ -515,19 +515,19 @@ namespace GodnestCSGOTool
                                                     di = di + 1;
                                                     Thread.Sleep(100);
                                                 }
-                                                statusteam = "Готово:" + lobbyID;
+                                                statusteam = "Ready:" + lobbyID;
                                             }
                                         }
                                     }
                                 }
                             }
                         }
-                        statusteam = "Все лобби проверенны!";
+                        statusteam = "All lobbies checked!";
                         Thread.Sleep(500);
                     }
                     else
                     {
-                        statusteam = "Нет токена!";
+                        statusteam = "No accesstoken!";
                         Thread.Sleep(2000);
                     }
                 }
@@ -579,7 +579,7 @@ namespace GodnestCSGOTool
         {
             if (callback.EMsg == 4004)
             {
-                statusteam = "Подключен к Стиму!";
+                statusteam = "Connected to steam!";
                 var resp = new ClientGCMsgProtobuf<CMsgClientWelcome>(callback.Message);
             }
             else if (callback.EMsg == 6614)
@@ -621,13 +621,13 @@ namespace GodnestCSGOTool
         {
             if (callback.Result != EResult.OK)
             {
-                statusteam = "Не могу подключиться к стиму: {0}" + callback.Result;
+                statusteam = "Can't connect to steam: {0}" + callback.Result;
 
                 mainform.isjoinlobby = false;
                 return;
             }
 
-            statusteam = "Захожу в аккаунт..." + username;
+            statusteam = "Logging into... " + username;
 
             byte[] sentryHash = null;
             if (File.Exists("data/" + Config.SteamLogin + ".sentry"))
@@ -661,7 +661,7 @@ namespace GodnestCSGOTool
             // after recieving an AccountLogonDenied, we'll be disconnected from steam
             // so after we read an authcode from the user, we need to reconnect to begin the logon flow again
 
-            statusteam = "Отключен от стима, переподключение через 5 секунд...";
+            statusteam = "Disconnected! Reconnecting after 5 seconds...";
 
             Thread.Sleep(TimeSpan.FromSeconds(5));
 
@@ -694,7 +694,7 @@ namespace GodnestCSGOTool
                 return;
             }
 
-            statusteam = "Зашел в аккаунт!";
+            statusteam = "Connected to account!";
 
             // at this point, we'd be able to perform actions on Steam
             ClientMsgProtobuf<CMsgClientGamesPlayed> msg = new ClientMsgProtobuf<CMsgClientGamesPlayed>(EMsg.ClientGamesPlayed, 64);

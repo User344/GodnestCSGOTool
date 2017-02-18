@@ -51,7 +51,7 @@
             this.materialRaisedButton20.Primary = true;
             this.materialRaisedButton20.Size = new System.Drawing.Size(610, 39);
             this.materialRaisedButton20.TabIndex = 37;
-            this.materialRaisedButton20.Text = "Заспамить";
+            this.materialRaisedButton20.Text = "SPAM!";
             this.materialRaisedButton20.UseVisualStyleBackColor = true;
             this.materialRaisedButton20.Click += new System.EventHandler(this.materialRaisedButton20_Click);
             // 

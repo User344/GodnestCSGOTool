@@ -92,14 +92,14 @@ namespace GodnestCSGOTool
             }
             catch (Exception e)
             {
-                informationsteam = (String.Format("Не могу прочитать файл '{0}': {1}", configFileName, e.Message));
-                errorlog(String.Format("Не могу прочитать файл '{0}': {1}", configFileName, e.Message));
+                informationsteam = (String.Format("Can't read file '{0}': {1}", configFileName, e.Message));
+                errorlog(String.Format("Can't read file '{0}': {1}", configFileName, e.Message));
                 return false;
             }
             if (Config.SteamLogin == null || Config.SteamPassword == null)
             {
-                informationsteam = ("Нет логина или пароля!");
-                errorlog(Config.SteamLogin + ":Нет логина или пароля!");
+                informationsteam = ("There is no login or password!");
+                errorlog(Config.SteamLogin + ":There is no login or password!");
                 return false;
             }
             return true;
@@ -125,7 +125,7 @@ namespace GodnestCSGOTool
                 account.TextVAC("None", Config.SteamLogin + ".json");
             }
             isRunning = false;
-            informationsteam = "Готово";
+            informationsteam = "Ready";
         }
         static public string now()
         {
@@ -142,13 +142,13 @@ namespace GodnestCSGOTool
             string report;
             if (result)
             {
-                report = String.Format( ": Лайк для {0} НАКРУЧЕН!", accountIDFormat(accountID));
+                report = String.Format( ": Like for {0} SEND!", accountIDFormat(accountID));
             }
             else
             {
-                report = String.Format( ": Лайк для {0} НЕ накручен!", accountIDFormat(accountID));
+                report = String.Format( ": Like for {0} NOT send!", accountIDFormat(accountID));
             }
-            informationsteam = "Готово";
+            informationsteam = "Ready";
             account account = new account();
             account.TextCOMMEND(report, Config.SteamLogin + ".json");
             isRunning = false;
@@ -158,13 +158,13 @@ namespace GodnestCSGOTool
             string report;
             if (confirmationID > 0)
             {
-                report =  ": Репорт для " + accountIDFormat(accountID) + " ОТПРАВЛЕН, report id " + confirmationID + ".";
+                report =  ": Report for " + accountIDFormat(accountID) + " SEND, report id " + confirmationID + ".";
             }
             else
             {
-                report =  ": Репорт для " + accountIDFormat(accountID) + " НЕ отправлен.";
+                report =  ": Report for " + accountIDFormat(accountID) + " NOT send.";
             }
-            informationsteam = "Готово";
+            informationsteam = "Ready";
             account account = new account();
             account.TextREPORT(report, Config.SteamLogin + ".json");
             isRunning = false;
@@ -198,7 +198,7 @@ namespace GodnestCSGOTool
             {
                 return;
             }
-            informationsteam = (String.Format("Покдючен к стиму!"));
+            informationsteam = (String.Format("Connected to steam!"));
 
             byte[] sentryHash = null;
 
@@ -222,7 +222,7 @@ namespace GodnestCSGOTool
             }
 
 
-            informationsteam = (String.Format("Вхожу в аккаунт..."));
+            informationsteam = (String.Format("Connecting to steam..."));
             startedAt = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
 
             SteamUser.LogOn(new SteamUser.LogOnDetails
@@ -246,7 +246,7 @@ namespace GodnestCSGOTool
                 return;
             }
 
-            informationsteam = (String.Format("Отключен от стима! Переподключаюсь..."));
+            informationsteam = (String.Format("Disconnecting from steam! Reconnecting..."));
 
             Thread.Sleep(TimeSpan.FromSeconds(5));
 
@@ -279,7 +279,7 @@ namespace GodnestCSGOTool
                     while (Authcodelegit == false)
                     {
                         NeedSteamGuardKey = true;
-                        informationsteam = (String.Format("Введи Steam Guard Ключ который пришел на мобильный телефон: ", callback.EmailDomain));
+                        informationsteam = (String.Format("Steam Guard Code: ", callback.EmailDomain));
                         if (mainform.SteamAuthCode != null)
                         {
                             TwoFactorCode = mainform.SteamAuthCode;
@@ -293,7 +293,7 @@ namespace GodnestCSGOTool
                     Authcodelegit = false;
                     if (Config.emaillogin != "None")
                     {
-                        informationsteam = (String.Format("Получаем почту..."));
+                        informationsteam = (String.Format("Getting mail..."));
                         Thread.Sleep(10000);
                         AuthCode = getmsgemail(Config.SteamLogin);
                         if (AuthCode == null)
@@ -301,7 +301,7 @@ namespace GodnestCSGOTool
                             while (Authcodelegit == false)
                             {
                                 NeedSteamGuardKey = true;
-                                informationsteam = (String.Format("Введи Steam Guard Ключ который пришел на Email {0}: ", callback.EmailDomain));
+                                informationsteam = (String.Format("Steam Guard Code: ", callback.EmailDomain));
                                 if (mainform.SteamAuthCode != null)
                                 {
                                     AuthCode = mainform.SteamAuthCode;
@@ -320,7 +320,7 @@ namespace GodnestCSGOTool
                         while (Authcodelegit == false)
                         {
                             NeedSteamGuardKey = true;
-                            informationsteam = (String.Format("Введи Steam Guard Ключ который пришел на Email {0}: ", callback.EmailDomain));
+                            informationsteam = (String.Format("Steam Guard Code: ", callback.EmailDomain));
                             if (mainform.SteamAuthCode != null)
                             {
                                 AuthCode = mainform.SteamAuthCode;
@@ -335,30 +335,30 @@ namespace GodnestCSGOTool
                     informationsteam = (String.Format("Unable to login to Steam: " + callback.Result));
                     if (!File.Exists(SentryFileName) && !File.Exists(LoginKeyFileName))
                     {
-                        informationsteam = "Неверный Пароль";
-                        errorlog(Config.SteamLogin + ":Неверный Пароль");
+                        informationsteam = "Wrong password";
+                        errorlog(Config.SteamLogin + ":Wrong password");
                     }
                     if (File.Exists(SentryFileName))
                     {
-                        informationsteam = (String.Format("Удаляю старый ключ..."));
+                        informationsteam = (String.Format("Deleting old key..."));
                         File.Delete(SentryFileName);
                     }
 
                     if (File.Exists(LoginKeyFileName))
                     {
-                        informationsteam = (String.Format("Удаляю старый ключ..."));
+                        informationsteam = (String.Format("Deleting old key..."));
                         File.Delete(LoginKeyFileName);
                     }
                     return;
                 case EResult.OK:
-                    informationsteam = (String.Format("Успешно подключен!"));
+                    informationsteam = (String.Format("Successfully connected!"));
                     break;
                 default:
-                    informationsteam = (String.Format("Немогу подключитьсья к стиму: {0} / {1}", callback.Result, callback.ExtendedResult));
-                    errorlog(Config.SteamLogin + String.Format(":Немогу подключитьсья к стиму: {0} / {1}", callback.Result, callback.ExtendedResult));
+                    informationsteam = (String.Format("Can't connect to steam: {0} / {1}", callback.Result, callback.ExtendedResult));
+                    errorlog(Config.SteamLogin + String.Format(":Can't connect to steam: {0} / {1}", callback.Result, callback.ExtendedResult));
                     return;
             }
-            informationsteam = (String.Format("Запускаю CSGO..."));
+            informationsteam = (String.Format("Starting CS:GO..."));
             if (kicksession == true)
             {
                 var kickSession = new ClientMsgProtobuf<CMsgClientKickPlayingSession>(EMsg.ClientKickPlayingSession);
@@ -395,7 +395,7 @@ namespace GodnestCSGOTool
             EResult max_members = (EResult)JoinResp.Body.max_members;
             EResult id_lobby = (EResult)JoinResp.Body.steam_id_lobby;
             EResult owner = (EResult)JoinResp.Body.steam_id_owner;
-            informationsteam = (String.Format("Подключен к:" + JoinResp.Body.steam_id_lobby));
+            informationsteam = (String.Format("Connected to:" + JoinResp.Body.steam_id_lobby));
         }
         static void AbandonCompGame()
         {
@@ -491,7 +491,7 @@ namespace GodnestCSGOTool
                         }
                     }
                 }
-                errorlog("Не могу найти письмо!");
+                errorlog("Can't find mail!");
                 return null;
             }
         }
@@ -550,7 +550,7 @@ namespace GodnestCSGOTool
             // this message is used for the GC, while the other is used for general steam messages
             var msg = new ClientGCMsgProtobuf<CMsgClientWelcome>(packetMsg);
 
-            informationsteam = (String.Format("Матчмейкинг привествует нас. Локация: {0}", msg.Body.location.country));
+            informationsteam = (String.Format("Matchmaking welcomes us. Location: {0}", msg.Body.location.country));
             var ClientToGC = new ClientGCMsgProtobuf<PlayerMedalsInfo>((uint)ECsgoGCMsg.k_EMsgGCCStrike15_v2_SetMyMedalsInfo);
             ClientToGC.Body.medal_global = 1318;
             SteamGameCoordinator.Send(ClientToGC, 730);
@@ -620,7 +620,7 @@ namespace GodnestCSGOTool
         }
         static async void CommendAccount()
         {
-            informationsteam = (String.Format("Лайкаю {0}...", accountID));
+            informationsteam = (String.Format("Liking {0}...", accountID));
 
             var requestCommend = new ClientGCMsgProtobuf<CMsgGCCStrike15_v2_ClientCommendPlayer>(
                 (uint)ECsgoGCMsg.k_EMsgGCCStrike15_v2_ClientCommendPlayer
@@ -645,7 +645,7 @@ namespace GodnestCSGOTool
 
         static void RequestRecentMatches()
         {
-            informationsteam = (String.Format("Запрашиваю последнии игры для аккаунта " + SteamUser.SteamID.AccountID + "..."));
+            informationsteam = (String.Format("Requesting last games for " + SteamUser.SteamID.AccountID + "..."));
             var requestGames = new ClientGCMsgProtobuf<CMsgGCCStrike15_v2_MatchListRequestRecentUserGames>(
                 (uint)ECsgoGCMsg.k_EMsgGCCStrike15_v2_MatchListRequestRecentUserGames
             );
@@ -660,7 +660,7 @@ namespace GodnestCSGOTool
             id.AccountID = accountID;
 
             reported = false;
-            informationsteam = (String.Format("Репорчю {0}...", id));
+            informationsteam = (String.Format("Reporting {0}...", id));
             victimID = accountID;
             var requestReport = new ClientGCMsgProtobuf<CMsgGCCStrike15_v2_ClientReportPlayer>((uint)ECsgoGCMsg.k_EMsgGCCStrike15_v2_ClientReportPlayer
             );
@@ -730,7 +730,7 @@ namespace GodnestCSGOTool
                 return;
             }
 
-            informationsteam = (String.Format("Отключен от стима: {0}", callback.Result));
+            informationsteam = (String.Format("Disconnected from steam: {0}", callback.Result));
             if (callback.Result == EResult.LoggedInElsewhere)
             {
                 isRunning = false;
@@ -753,11 +753,11 @@ namespace GodnestCSGOTool
                 return;
             }
 
-            informationsteam = (String.Format("Обновляю ключ..."));
+            informationsteam = (String.Format("Updating key..."));
             File.WriteAllText(LoginKeyFileName, callback.LoginKey);
 
             SteamUser.AcceptNewLoginKey(callback);
-            informationsteam = (String.Format("Обновляю ключ...готово!"));
+            informationsteam = (String.Format("Updating key... Done!"));
         }
         static void OnMachineAuth(SteamUser.UpdateMachineAuthCallback callback)
         {
@@ -766,7 +766,7 @@ namespace GodnestCSGOTool
                 return;
             }
 
-            informationsteam = (String.Format("Обновляю ключ..."));
+            informationsteam = (String.Format("Updating key..."));
 
             int fileSize;
             byte[] sentryHash;
@@ -819,7 +819,7 @@ namespace GodnestCSGOTool
             LoginKeyFileName = "data/" + Config.SteamLogin + ".key";
             SentryFileName = "data/" + Config.SteamLogin + ".sentry";
             //SteamClient.DebugNetworkListener = new NetHookNetworkListener( "debug/" );
-            informationsteam = "Подключаюсь к стиму...";
+            informationsteam = "Connecting to steam...";
 
             SteamClient.Connect();
             isRunning = true;
@@ -845,7 +845,7 @@ namespace GodnestCSGOTool
             LoginKeyFileName = "data/" + Config.SteamLogin + ".key";
             SentryFileName = "data/" + Config.SteamLogin + ".sentry";
             //SteamClient.DebugNetworkListener = new NetHookNetworkListener( "debug/" );
-            informationsteam = "Подключаюсь к стиму...";
+            informationsteam = "Connecting to steam...";
 
             SteamClient.Connect();
             isRunning = true;
@@ -879,7 +879,7 @@ namespace GodnestCSGOTool
             LoginKeyFileName = "data/" + Config.SteamLogin + ".key";
             SentryFileName = "data/" + Config.SteamLogin + ".sentry";
             //SteamClient.DebugNetworkListener = new NetHookNetworkListener( "debug/" );
-            informationsteam = "Подключаюсь к стиму...";
+            informationsteam = "Connecting to steam...";
 
             SteamClient.Connect();
             isRunning = true;

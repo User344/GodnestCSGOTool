@@ -156,12 +156,12 @@ namespace GodnestCSGOTool
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange700, Primary.Red400, Primary.Blue400, Accent.Blue400, TextShade.BLACK);
-            tabPage1.Text = "Отлега";
-            tabPage2.Text = "Аккаунты и настройки";
-            tabPage3.Text = "Репортбот";
-            tabPage4.Text = "Лайкбот";
+            tabPage1.Text = "OW delay";
+            tabPage2.Text = "Accounts and settings";
+            tabPage3.Text = "ReportBot";
+            tabPage4.Text = "LikeBot";
             tabPage5.Text = "Lobby Stuff";
-            tabPage6.Text = "Парсер";
+            tabPage6.Text = "Parser";
             updatelistbox();
             listBox2.Items.Clear();
             listBox3.Items.Clear();
@@ -182,8 +182,8 @@ namespace GodnestCSGOTool
                     listBox2.Items.Add(Config.SteamLogin);
                     howmuchaccountsnotneed = howmuchaccountsnotneed + 1;
                 }
-                materialLabel2.Text = String.Format("Используются = " + howmuchaccounts);
-                materialLabel3.Text = String.Format("Не Используются = " + howmuchaccountsnotneed);
+                materialLabel2.Text = String.Format("Used = " + howmuchaccounts);
+                materialLabel3.Text = String.Format("Not Used = " + howmuchaccountsnotneed);
             }
 
             try
@@ -244,8 +244,8 @@ namespace GodnestCSGOTool
                     }
                 }
             }
-            materialLabel2.Text = String.Format("Используются = " + howmuchaccounts);
-            materialLabel3.Text = String.Format("Не Используются = " + howmuchaccountsnotneed);
+            materialLabel2.Text = String.Format("Used = " + howmuchaccounts);
+            materialLabel3.Text = String.Format("Not Used = " + howmuchaccountsnotneed);
             label1.Text = (Otlegacheck.informationsteam);
             label2.Text = (Otlegacheck.informationsteam);
             label3.Text = (Otlegacheck.informationsteam);
@@ -284,7 +284,7 @@ namespace GodnestCSGOTool
                 textBox9.Enabled = true;
             }
             SettingsConfig = JsonConvert.DeserializeObject<SettingsConfig>(File.ReadAllText("cfg.json"));
-            if (textBox1.Text.Equals("Логин"))
+            if (textBox1.Text.Equals("Login"))
             {
                 materialRaisedButton3.Enabled = false;
             }
@@ -357,7 +357,7 @@ namespace GodnestCSGOTool
                     TimeSpan t = TimeSpan.FromSeconds(nows() - Convert.ToUInt64(Config.TextOTLYOGA));
                     TimeSpan p = TimeSpan.FromSeconds(nows() - Convert.ToUInt64(Config.cooldowntimechecked));
                     string log;
-                    log = String.Format(Config.SteamLogin + ":::" + "Последний матч закончился:{0:D1}d:{1:D1}h:{2:D1}m:{3:D1}:::Проверялась:{4:D1}d:{5:D1}h:{6:D1}m:{7:D1}", t.Days, t.Hours, t.Minutes, t.Seconds, p.Days, p.Hours, p.Minutes, p.Seconds + "s назад:::VAC-" + Config.TextVAC);
+                    log = String.Format(Config.SteamLogin + ":::" + "Last match:{0:D1}d:{1:D1}h:{2:D1}m:{3:D1}:::Checked:{4:D1}d:{5:D1}h:{6:D1}m:{7:D1}", t.Days, t.Hours, t.Minutes, t.Seconds, p.Days, p.Hours, p.Minutes, p.Seconds + "s :::VAC-" + Config.TextVAC);
                     if (Config.TextVAC == "None")
                     {
                         log = log + ":::Rank-" + Config.TextRANK;
@@ -475,8 +475,8 @@ namespace GodnestCSGOTool
             {
                 File.WriteAllText("vkpublics.txt", null);
             }
-            label14.Text = "Проверено:" + checkingnowbans;
-            label15.Text = "Забанено:" + bannedbyow;
+            label14.Text = "Checked:" + checkingnowbans;
+            label15.Text = "Banned:" + bannedbyow;
             if (listBox12.SelectedItem == null)
             {
                 listBox12.Items.Clear();
@@ -516,24 +516,24 @@ namespace GodnestCSGOTool
                 }
             }
 
-            label13.Text = "Засканил:" + Handler.checkinglobbys;
-            label16.Text = "Крашнуто:" + Handler.crashedhomeless;
-            label17.Text = "Отправил:" + Handler.sendjoins;
+            label13.Text = "Scaned:" + Handler.checkinglobbys;
+            label16.Text = "Crashed:" + Handler.crashedhomeless;
+            label17.Text = "Sended:" + Handler.sendjoins;
             label18.Text = Convert.ToString(Handler.firstid);
 
             try
             {
                 steamids = File.ReadAllLines("steamids.txt").Count();
-                label8.Text = "SteamID'шников записано:" + steamids;
+                label8.Text = "Writed SteamID:" + steamids;
             }
             catch (Exception)
             {
 
             }
-            label9.Text = "Лобби крашнуто:" + lobby.howmucrashed;
+            label9.Text = "Lobby crashed:" + lobby.howmucrashed;
             if (itslaunched != true)
             {
-                button1.Text = "Проверить отлегу";
+                button1.Text = "Check ow bypass";
                 materialTabSelector1.Enabled = true;
                 materialRaisedButton5.Enabled = true;
                 materialLabel1.Visible = true;
@@ -559,7 +559,7 @@ namespace GodnestCSGOTool
                 materialRaisedButton5.Enabled = true;
                 if (SettingsConfig.Accslegit == true)
                 {
-                    materialRaisedButton5.Text = "Аккаунты проверены";
+                    materialRaisedButton5.Text = "Accounts was checked!";
                     materialRaisedButton5.Enabled = false;
                     button1.Visible = true;
                     materialRaisedButton9.Visible = true;
@@ -572,7 +572,7 @@ namespace GodnestCSGOTool
                         button1.Visible = false;
                         materialRaisedButton9.Visible = false;
                         materialRaisedButton12.Visible = false;
-                        materialRaisedButton5.Text = "Проверить аккаунты";
+                        materialRaisedButton5.Text = "Check accounts";
                         materialRaisedButton5.Enabled = true;
                     }
                 }
@@ -600,7 +600,7 @@ namespace GodnestCSGOTool
                     }
                     else
                     {
-                        materialRaisedButton12.Text = "Лайкнуть";
+                        materialRaisedButton12.Text = "Like";
                         materialRaisedButton12.BackColor = System.Drawing.Color.Green;
                         materialRaisedButton12.Enabled = true;
                         materialRaisedButton7.Visible = false;
@@ -624,7 +624,7 @@ namespace GodnestCSGOTool
                     }
                     else
                     {
-                        materialRaisedButton9.Text = "Репортботнуть";
+                        materialRaisedButton9.Text = "Reportbot";
                         materialRaisedButton9.BackColor = System.Drawing.Color.Green;
                         materialRaisedButton9.Enabled = true;
                         materialRaisedButton6.Visible = false;
@@ -635,7 +635,7 @@ namespace GodnestCSGOTool
                     File.WriteAllText("data/" + "lastreport.txt", "0");
                 }
             }
-            if (textBox3.Text == "Логин от почты")
+            if (textBox3.Text == "Mail login")
             {
                 materialRaisedButton14.Visible = false;
                 SettingsConfig = JsonConvert.DeserializeObject<SettingsConfig>(File.ReadAllText("cfg.json"));
@@ -700,9 +700,9 @@ namespace GodnestCSGOTool
             {
                 materialRaisedButton8.Visible = false;
                 launchcsgo.Visible = false;
-                launchsteam.Text = "Укажи путь в настройках";
+                launchsteam.Text = "Specify the path in the settings";
                 launchsteam.Enabled = false;
-                launchcsgo.Text = "Укажи путь в настройках";
+                launchcsgo.Text = "Specify the path in the settings";
                 launchcsgo.Enabled = false;
             }
             else
@@ -719,8 +719,8 @@ namespace GodnestCSGOTool
                     launchsteam.Visible = true;
                     launchcsgo.Visible = true;
                     materialRaisedButton8.Visible = true;
-                    launchsteam.Text = "Запустить CS:GO";
-                    launchcsgo.Text = "Запустить Steam";
+                    launchsteam.Text = "Start CS:GO";
+                    launchcsgo.Text = "Start Steam";
                 }
             }
         }
@@ -814,7 +814,7 @@ namespace GodnestCSGOTool
         private void materialRaisedButton5_Click(object sender, EventArgs e)
         {
             Task.Run(() => checkcooldownall());
-            button1.Text = "Проверяеться...";
+            button1.Text = "Checking...";
             materialTabSelector1.Enabled = false;
         }
         public void checkcooldownall()
@@ -863,7 +863,7 @@ namespace GodnestCSGOTool
             materialLabel1.Visible = false;
             materialTabSelector1.Enabled = false;
             materialRaisedButton5.Enabled = false;
-            materialRaisedButton5.Text = "Проверяем...";
+            materialRaisedButton5.Text = "Checking...";
         }
         private void checkcoolaccs()
         {
@@ -899,7 +899,7 @@ namespace GodnestCSGOTool
                 id = 0;
                 Task.Run(() => kicknigger(Config.SteamLogin));
                 itslaunched = true;
-                materialRaisedButton8.Text = "Кикаем...";
+                materialRaisedButton8.Text = "Kicking...";
                 materialTabSelector1.Enabled = false;
                 listBox1.SelectedIndex = -1;
             }
@@ -908,7 +908,7 @@ namespace GodnestCSGOTool
         {
             Otlegacheck.DOkickow(configname + ".json");
             itslaunched = false;
-            materialRaisedButton8.Text = "OW bypass";
+            materialRaisedButton8.Text = "OW delay";
             materialTabSelector1.Enabled = true;
         }
 
@@ -1000,8 +1000,8 @@ namespace GodnestCSGOTool
                     InUse = false,
                     SteamLogin = textBox1.Text,
                     SteamPassword = textBox2.Text,
-                    TextREPORT = "Не репортил",
-                    TextCOMMEND = "Не Лайкал",
+                    TextREPORT = "Not reported",
+                    TextCOMMEND = "Not liked",
                     TextOTLYOGA = 0,
                     TextRANK = "Unknown",
                     TextVAC = "Unknown",
@@ -1019,10 +1019,10 @@ namespace GodnestCSGOTool
                 System.IO.File.WriteAllText("data/" + textBox1.Text + ".json", json);
                 account account = new account();
                 account.Accslegit(false);
-                textBox1.Text = "Логин";
-                textBox2.Text = "Пароль";
-                textBox4.Text = "Логин от почты";
-                textBox5.Text = "Пароль от почты";
+                textBox1.Text = "Login";
+                textBox2.Text = "Password";
+                textBox4.Text = "Mail login";
+                textBox5.Text = "Mail password";
                 textBox6.Text = "POP3 Protocol";
                 checkBox3.Checked = false;
                 howmuchaccountsnotneed = howmuchaccountsnotneed + 1;
@@ -1038,8 +1038,8 @@ namespace GodnestCSGOTool
                         InUse = false,
                         SteamLogin = textBox1.Text,
                         SteamPassword = textBox2.Text,
-                        TextREPORT = "Не репортил",
-                        TextCOMMEND = "Не Лайкал",
+                        TextREPORT = "Not reported",
+                        TextCOMMEND = "Not liked",
                         TextOTLYOGA = 0,
                         TextRANK = "Unknown",
                         TextVAC = "Unknown",
@@ -1057,10 +1057,10 @@ namespace GodnestCSGOTool
                     System.IO.File.WriteAllText("data/" + textBox1.Text + ".json", json);
                     account account = new account();
                     account.Accslegit(false);
-                    textBox1.Text = "Логин";
-                    textBox2.Text = "Пароль";
-                    textBox4.Text = "Логин от почты";
-                    textBox5.Text = "Пароль от почты";
+                    textBox1.Text = "Login";
+                    textBox2.Text = "Password";
+                    textBox4.Text = "Mail login";
+                    textBox5.Text = "Mail password";
                     textBox6.Text = "POP3 Protocol";
                     checkBox3.Checked = false;
                     howmuchaccountsnotneed = howmuchaccountsnotneed + 1;
@@ -1073,8 +1073,8 @@ namespace GodnestCSGOTool
                         InUse = false,
                         SteamLogin = textBox1.Text,
                         SteamPassword = textBox2.Text,
-                        TextREPORT = "Не репортил",
-                        TextCOMMEND = "Не Лайкал",
+                        TextREPORT = "Not reported",
+                        TextCOMMEND = "Not liked",
                         TextOTLYOGA = 0,
                         TextRANK = "Unknown",
                         TextVAC = "Unknown",
@@ -1092,10 +1092,10 @@ namespace GodnestCSGOTool
                     System.IO.File.WriteAllText("data/" + textBox1.Text + ".json", json);
                     account account = new account();
                     account.Accslegit(false);
-                    textBox1.Text = "Логин";
-                    textBox2.Text = "Пароль";
-                    textBox4.Text = "Логин от почты";
-                    textBox5.Text = "Пароль от почты";
+                    textBox1.Text = "Login";
+                    textBox2.Text = "Password";
+                    textBox4.Text = "Mail login";
+                    textBox5.Text = "Mail password";
                     textBox6.Text = "POP3 Protocol";
                     checkBox3.Checked = false;
                     howmuchaccountsnotneed = howmuchaccountsnotneed + 1;
@@ -1180,8 +1180,8 @@ namespace GodnestCSGOTool
                     listBox2.Items.Add(Config.SteamLogin);
                 }
             }
-            materialLabel2.Text = String.Format("Используются = " + howmuchaccounts);
-            materialLabel3.Text = String.Format("Не Используются = " + howmuchaccountsnotneed);
+            materialLabel2.Text = String.Format("Used = " + howmuchaccounts);
+            materialLabel3.Text = String.Format("Not Used = " + howmuchaccountsnotneed);
         }
 
         private void materialRaisedButton12_Click(object sender, EventArgs e)
@@ -1220,7 +1220,7 @@ namespace GodnestCSGOTool
             {
                 account account = new account();
                 account.Steamfile(folderBrowserDialog1.SelectedPath + "\\Steam.exe");
-                materialRaisedButton16.Text = "Готово!";
+                materialRaisedButton16.Text = "Ready!";
                 materialRaisedButton16.Enabled = false;
             }
         }
@@ -1232,8 +1232,8 @@ namespace GodnestCSGOTool
             account.emailpassword("None");
             account.emailserver("None");
             account.emailssl(false);
-            textBox3.Text = "Логин от почты";
-            textBox7.Text = "Пароль от почты";
+            textBox3.Text = "Mail login";
+            textBox7.Text = "Mail password";
             textBox8.Text = "POP3 Protocol";
             materialRaisedButton14.Enabled = true;
             checkBox4.Enabled = true;
@@ -1279,7 +1279,7 @@ namespace GodnestCSGOTool
                     textBox3.Enabled = false;
                     checkBox4.Enabled = false;
                     materialRaisedButton14.Enabled = false;
-                    materialRaisedButton14.Text = "Почта загружена!";
+                    materialRaisedButton14.Text = "Mail loaded!";
                     return;
                 }
             }
@@ -1322,7 +1322,7 @@ namespace GodnestCSGOTool
             }
             else
             {
-                materialRaisedButton13.Text = "Steam3ID блять";
+                materialRaisedButton13.Text = "Steam3ID blyat";
             }
         }
 
@@ -1335,7 +1335,7 @@ namespace GodnestCSGOTool
             }
             else
             {
-                materialRaisedButton10.Text = "Steam3ID блять";
+                materialRaisedButton10.Text = "Steam3ID blyat";
             }
         }
 
@@ -1355,7 +1355,7 @@ namespace GodnestCSGOTool
                 Config = JsonConvert.DeserializeObject<Config>(File.ReadAllText("data/" + file));
                 if (Config.InUse == true)
                 {
-                    account.TextCOMMEND("Текст сброшен", Config.SteamLogin + ".json");
+                    account.TextCOMMEND("Text reseted", Config.SteamLogin + ".json");
                 }
             }
             uodatelistboxcommend();
@@ -1372,7 +1372,7 @@ namespace GodnestCSGOTool
                 Config = JsonConvert.DeserializeObject<Config>(File.ReadAllText("data/" + file));
                 if (Config.InUse == true)
                 {
-                    account.TextREPORT("Текст сброшен", Config.SteamLogin + ".json");
+                    account.TextREPORT("Text reseted", Config.SteamLogin + ".json");
                 }
             }
             uodatelistboxreport();
@@ -1406,7 +1406,7 @@ namespace GodnestCSGOTool
                     isjoinlobby = true;
                     string nowacc = listBox6.SelectedItem.ToString();
                     Task.Run(() => lobby.joininlobby(nowacc + ".json"));
-                    materialRaisedButton11.Text = "Отключиться";
+                    materialRaisedButton11.Text = "Dissconecting";
                     materialRaisedButton20.Visible = true;
                     textBox10.Visible = true;
                     comboBox1.Visible = true;
@@ -1423,14 +1423,14 @@ namespace GodnestCSGOTool
                 else
                 {
                     clrmsg();
-                    lobby.statusteam = "Отключен";
+                    lobby.statusteam = "Disconnected";
                     lobbyid = 0;
                     lobbyid = Convert.ToUInt64(textBox10.Text);
                     name = null;
                     numbersofwins = null;
                     IsPrime = false;
                     Medals = false;
-                    materialRaisedButton11.Text = "Подключиться";
+                    materialRaisedButton11.Text = "Connecting";
                     isjoinlobby = false;
                     materialRaisedButton20.Visible = false;
                     textBox10.Visible = false;
@@ -1448,7 +1448,7 @@ namespace GodnestCSGOTool
             }
             else
             {
-                materialRaisedButton11.Text = "Выбери аккаунт";
+                materialRaisedButton11.Text = "Choose account";
             }
         }
 
@@ -1520,12 +1520,12 @@ namespace GodnestCSGOTool
             {
                 crashlobby = true;
                 Task.Run(() => lobby.SpamMessage());
-                materialRaisedButton18.Text = "Стоп";
+                materialRaisedButton18.Text = "Stop";
                 materialRaisedButton17.Visible = false;
             }
             else
             {
-                materialRaisedButton18.Text = "СПАМ";
+                materialRaisedButton18.Text = "SPAM";
                 crashlobby = false;
                 materialRaisedButton17.Visible = true;
             }
@@ -1577,12 +1577,12 @@ namespace GodnestCSGOTool
                 autocrash = checkBox9.Checked;
                 nonkickablebots = checkBox10.Checked;
                 Task.Run(() => lobby.GetLobbys());
-                materialRaisedButton21.Text = "Ебашим";
+                materialRaisedButton21.Text = "Ebashim";
             }
             else
             {
                 autoparser = false;
-                materialRaisedButton21.Text = "Разъебать CS:GO Cheats";
+                materialRaisedButton21.Text = "Fuck up CS:GO Cheats (group in VK(social network))";
             }
         }
 
@@ -1593,7 +1593,7 @@ namespace GodnestCSGOTool
                 isjoinlobby = true;
                 string nowacc = listBox9.SelectedItem.ToString();
                 Task.Run(() => lobby.joininlobby(nowacc + ".json"));
-                materialRaisedButton25.Text = "Отключиться";
+                materialRaisedButton25.Text = "Disconnect";
                 name = "CSGO OverWatch";
                 level = 1;
                 rankid = 0;
@@ -1601,7 +1601,7 @@ namespace GodnestCSGOTool
             }
             else
             {
-                materialRaisedButton25.Text = "Подключиться";
+                materialRaisedButton25.Text = "Connect";
                 isjoinlobby = false;
             }
         }
@@ -1618,13 +1618,13 @@ namespace GodnestCSGOTool
                 listenkech = true;
                 autoparser = true;
                 Task.Run(() => lobby.GetLobbys());
-                materialRaisedButton19.Text = "Патрулирую...";
+                materialRaisedButton19.Text = "Overwatching...";
             }
             else
             {
                 listenkech = false;
                 autoparser = false;
-                materialRaisedButton19.Text = "Начать патруль";
+                materialRaisedButton19.Text = "Start Overwatch";
             }
             if (startyowerwatch == false)
             {
@@ -1710,13 +1710,13 @@ namespace GodnestCSGOTool
                 if (listBox9.SelectedItem != null)
                 {
                     startsearchlobby = true;
-                    materialRaisedButton31.Text = "Ищу...";
+                    materialRaisedButton31.Text = "Searching...";
                     Task.Run(() => lobby.Findlobby());
                 }
             }
             else
             {
-                materialRaisedButton31.Text = "Искать в лобби";
+                materialRaisedButton31.Text = "Search in lobby";
                 startsearchlobby = false;
             }
         }
@@ -1870,30 +1870,30 @@ namespace GodnestCSGOTool
             {
                 Task.Run(() => findandcrashbithc());
                 isparsinglocalprofile = true;
-                materialRaisedButton24.Text = "Крашим...";
+                materialRaisedButton24.Text = "Crashing...";
             }
             else
             {
                 isparsinglocalprofile = false;
-                materialRaisedButton24.Text = "Крашить бомжей";
+                materialRaisedButton24.Text = "Crash";
             }
         }
         void findandcrashbithc()
         {
             while (isparsinglocalprofile != false)
             {
-                lobby.statusteam = "Читаю файл";
+                lobby.statusteam = "Reading file...";
                 string[] ids = File.ReadAllLines("steamidsforattack.txt");
                 for (int i = 0; i < ids.Count(); i++)
                 {
                     WebClient client = new WebClient();
                     Thread.Sleep(500);
                     string profile = client.DownloadString("http://steamcommunity.com/profiles/" + ids[i]);
-                    lobby.statusteam = "Проверяю профиль...";
+                    lobby.statusteam = "Checking profile...";
                     string lobby1 = getBetween(profile, "steam://joinlobby/730/", "/");
                     if (lobby1 != null)
                     {
-                        lobby.statusteam = "Крашу бомжа!";
+                        lobby.statusteam = "Crashing";
                         lobbyid = Convert.ToUInt64(lobby1);
                         autocrash = true;
                         lobby.join();
@@ -1924,7 +1924,7 @@ namespace GodnestCSGOTool
                     if (checkBox14.Checked == true)
                     {
                         startsearchlobby = true;
-                        materialRaisedButton35.Text = "Ищу...";
+                        materialRaisedButton35.Text = "Searching...";
                         Task.Run(() => lobby.OwnSlayerStart());
                         spamsomemessages = false;
                     }
@@ -1934,7 +1934,7 @@ namespace GodnestCSGOTool
                         {
                             joinforprotect = true;
                             startsearchlobby = true;
-                            materialRaisedButton35.Text = "Ищу...";
+                            materialRaisedButton35.Text = "Searching...";
                             Task.Run(() => lobby.OwnSlayerStart());
                             spamsomemessages = false;
                         }
@@ -1944,7 +1944,7 @@ namespace GodnestCSGOTool
                             dontcrashihm = checkBox13.Checked;
                             spamessage = "Type -rep, he is cheater: http://steamcommunity.com/id/kzhack/";
                             startsearchlobby = true;
-                            materialRaisedButton35.Text = "Спамлю...";
+                            materialRaisedButton35.Text = "Spamming...";
                             Task.Run(() => lobby.spaminalllobys());
                         }
                     }
@@ -1952,7 +1952,7 @@ namespace GodnestCSGOTool
             }
             else
             {
-                materialRaisedButton35.Text = "Спамить в лобби";
+                materialRaisedButton35.Text = "Spam in lobby";
                 startsearchlobby = false;
             }
         }
@@ -2017,13 +2017,13 @@ namespace GodnestCSGOTool
                 if (listBox9.SelectedItem != null)
                 {
                     scaneveything = true;
-                    materialRaisedButton31.Text = "Ищу...";
+                    materialRaisedButton31.Text = "Searching...";
                     Task.Run(() => lobby.scaneverything());
                 }
             }
             else
             {
-                materialRaisedButton31.Text = "Искать в лобби";
+                materialRaisedButton31.Text = "Search in lobby";
                 scaneveything = false;
             }
         }

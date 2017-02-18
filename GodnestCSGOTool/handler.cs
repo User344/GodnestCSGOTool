@@ -617,7 +617,7 @@ namespace GodnestCSGOTool
                                             {
                                                 if (JoinResp.Body.members[i].persona_name.Contains(nametokick))
                                                 {
-                                                    Sendmsgwithinfo("Кикаю:" + JoinResp.Body.members[i].persona_name, JoinResp.Body.steam_id_lobby);
+                                                    Sendmsgwithinfo("Kicking:" + JoinResp.Body.members[i].persona_name, JoinResp.Body.steam_id_lobby);
                                                     KickMsgfull(JoinResp.Body.members[i].steam_id, JoinResp.Body.steam_id_lobby);
                                                 }
                                             }
@@ -704,7 +704,7 @@ namespace GodnestCSGOTool
                                     {
                                         SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\Windows Notify Calendar.wav");
                                         File.WriteAllText("searchinlobbys/" + JoinResp.Body.members[di].steam_id + "ifindhim.txt", "steam://joinlobby/730/" + Convert.ToString(JoinResp.Body.steam_id_lobby + Environment.NewLine + JoinResp.Body.members[di].persona_name));
-                                        lobby.statusteam = "Я нашел его:" + Convert.ToString(JoinResp.Body.steam_id_lobby);
+                                        lobby.statusteam = "I find him:" + Convert.ToString(JoinResp.Body.steam_id_lobby);
                                         currentname = JoinResp.Body.members[di].persona_name;
                                         currentlobbyid = JoinResp.Body.steam_id_lobby;
                                         var SendMessage = new ClientMsgProtobuf<CMsgClientMMSSendLobbyChatMsg>(EMsg.ClientMMSSendLobbyChatMsg);
@@ -774,7 +774,7 @@ namespace GodnestCSGOTool
                         catch (Exception) { File.WriteAllText(pathssteamids + DateTime.UtcNow.ToShortDateString() + ".txt", JoinResp.Body.members[i].steam_id.ToString()); }
                     }
                     iminlobby = true;
-                    lobby.statusteam = "Зашел в лобби:" + JoinResp.Body.steam_id_lobby;
+                    lobby.statusteam = "Joined lobby:" + JoinResp.Body.steam_id_lobby;
                 }
             }
             else
@@ -791,7 +791,7 @@ namespace GodnestCSGOTool
                 {
                     File.WriteAllText("badlobbys.txt", Convert.ToString(JoinResp.Body.steam_id_lobby));
                 }
-                lobby.statusteam = "Немогу подключиться к лобби";
+                lobby.statusteam = "Can't join lobby!";
             }
             if (needcrashowner == false)
             {
@@ -887,11 +887,11 @@ namespace GodnestCSGOTool
                             {
                                 if (JoinResp.Body.members.Count == 6)
                                 {
-                                    lobby.statusteam = "Проверяю лобби:" + JoinResp.Body.steam_id_lobby;
+                                    lobby.statusteam = "Checking lobby:" + JoinResp.Body.steam_id_lobby;
                                     sendjoinmsg(fakesteamid, "CS:GO", Convert.ToUInt32(562447254), Convert.ToInt32(18), Convert.ToInt32(33), JoinResp.Body.steam_id_lobby);
                                     Thread.Sleep(500);
-                                    InviteMessage("Вжух и снова вас приветствует [censored] и Gerbal Elite");
-                                    InviteMessage("Вся информация есть на [censored].xyz");
+                                    InviteMessage("And again [censored] and Gerbal Elite meeting you!");
+                                    InviteMessage("All info can be found on [censored].xyz");
                                     string pathssteamids = null;
                                     try
                                     {
@@ -901,8 +901,8 @@ namespace GodnestCSGOTool
                                     {
                                         pathssteamids = null;
                                     }
-                                    InviteMessage(Convert.ToString("Всего нахлебов кикнуто:" + File.ReadAllLines(pathssteamids + DateTime.UtcNow.ToShortDateString() + "nahlebs.txt").Count()));
-                                    InviteMessage("Мы проверяем ваше лобби на наличие нахлебников...");
+                                    InviteMessage(Convert.ToString("I kicked " + File.ReadAllLines(pathssteamids + DateTime.UtcNow.ToShortDateString() + "nahlebs.txt").Count() + " freeloaders!"));
+                                    InviteMessage("Checking your lobby for freeloader...");
                                     return;
                                 }
                                 else
@@ -1078,11 +1078,11 @@ namespace GodnestCSGOTool
                             {
                                 sendjoinmsg(fakesteamid, "CS:GO", Convert.ToUInt32(2281488), Convert.ToInt32(18), Convert.ToInt32(33), resp.Body.steam_id_lobby);
                                 Thread.Sleep(500);
-                                Sendmsgwithinfo("Ты че сделал сука. Пиздюли через 3...", resp.Body.steam_id_lobby);
+                                Sendmsgwithinfo("Wtf man. Fuck you! Feel my power in 3...", resp.Body.steam_id_lobby);
                                 Thread.Sleep(1000);
-                                Sendmsgwithinfo("Через 2...", resp.Body.steam_id_lobby);
+                                Sendmsgwithinfo("2...", resp.Body.steam_id_lobby);
                                 Thread.Sleep(1000);
-                                Sendmsgwithinfo("Через 1...", resp.Body.steam_id_lobby);
+                                Sendmsgwithinfo("1...", resp.Body.steam_id_lobby);
                                 Thread.Sleep(1000);
                                 for (int i = 0; i <= 50; i++)
                                 {
@@ -1197,11 +1197,11 @@ namespace GodnestCSGOTool
                                     KickMsgfull(steamid, resp.Body.steam_id_lobby);
                                 }
                                 Thread.Sleep(500);
-                                Sendmsgwithinfo("Мой царь хочет вам дать пизды. Пиздюли через 3...", resp.Body.steam_id_lobby);
+                                Sendmsgwithinfo("Feel power of pizduli in 3...", resp.Body.steam_id_lobby);
                                 Thread.Sleep(1000);
-                                Sendmsgwithinfo("Через 2...", resp.Body.steam_id_lobby);
+                                Sendmsgwithinfo("2...", resp.Body.steam_id_lobby);
                                 Thread.Sleep(1000);
-                                Sendmsgwithinfo("Через 1...", resp.Body.steam_id_lobby);
+                                Sendmsgwithinfo("1...", resp.Body.steam_id_lobby);
                                 Thread.Sleep(1000);
                                 for (int i = 0; i <= 50; i++)
                                 {
@@ -1230,7 +1230,7 @@ namespace GodnestCSGOTool
                                 else
                                 {
                                     sendjoinmsg(fakesteamid, "CS:GO", Convert.ToUInt32(2281488), Convert.ToInt32(18), Convert.ToInt32(33), resp.Body.steam_id_lobby);
-                                    Sendmsgwithinfo("Не могу найти игрока", resp.Body.steam_id_lobby);
+                                    Sendmsgwithinfo("Can't find player", resp.Body.steam_id_lobby);
                                     LeaveLobby(resp.Body.steam_id_lobby);
                                     newlobbyid = 0;
                                     currentlobbyid = 0;
@@ -1277,7 +1277,7 @@ namespace GodnestCSGOTool
                             if (resp.Body.steam_id_sender != Convert.ToUInt64(mysteamid + 76561197960265728))
                             {
                                 File.WriteAllText("searchinlobbys/" + resp.Body.steam_id_sender + "ifindhim.txt", "steam://joinlobby/730/" + Convert.ToString(resp.Body.steam_id_lobby));
-                                lobby.statusteam = "Я нашел его:" + Convert.ToString(resp.Body.steam_id_lobby);
+                                lobby.statusteam = "I find him:" + Convert.ToString(resp.Body.steam_id_lobby);
                                 currentlobbyid = resp.Body.steam_id_lobby;
                                 if (mainform.joinforprotect == true)
                                 {
@@ -1323,7 +1323,7 @@ namespace GodnestCSGOTool
                             if (blacklist.Contains(Convert.ToString(steamid64owner)) == true)
                             {
                                 needcrashowner = true;
-                                reasoncrashowner = " Ты в черном списке ";
+                                reasoncrashowner = " You are in black list ";
                             }
                             else
                             {
@@ -1338,7 +1338,7 @@ namespace GodnestCSGOTool
                                     {
                                         writenahlebstofile(steamidofowner);
                                         needcrashowner = true;
-                                        reasoncrashowner = " Приватный ранг выше 30го.";
+                                        reasoncrashowner = " Privat rank above 30.";
                                     }
                                     else
                                     {
@@ -1346,13 +1346,13 @@ namespace GodnestCSGOTool
                                         {
                                             writenahlebstofile(steamidofowner);
                                             needcrashowner = true;
-                                            reasoncrashowner = " Побед больше 300.";
+                                            reasoncrashowner = " Wins above 300.";
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    InviteMessage(String.Format("У вас создатель лобби царь и бог, он в вайтлисте."));
+                                    InviteMessage(String.Format("U have lord-creator in whitelist"));
                                 }
                             }
                             string infoofmembers = getBetween(goodinfomate, "7072696D6500000000", "0B0B0B0B0B0B") + "0B0B0B0B0B0B";
@@ -1370,7 +1370,7 @@ namespace GodnestCSGOTool
                                     if (blacklist.Contains(Convert.ToString(steamid64)) == true)
                                     {
                                         KickMsgfull(Convert.ToUInt32(steamid + 76561197960265728), resp.Body.steam_id_lobby);
-                                        InviteMessage(String.Format("Кикнут нахлебник:" + (steamid + 76561197960265728) + " Причина: в черном списке"));
+                                        InviteMessage(String.Format("Kicked freeloader:" + (steamid + 76561197960265728) + " Reason: in blacklist"));
                                     }
                                     else
                                     {
@@ -1380,14 +1380,14 @@ namespace GodnestCSGOTool
                                             {
                                                 istherenahlebs = true;
                                                 writenahlebstofile(steamid);
-                                                reasonkick = (String.Format(" Причина: Приватный ранг выше 30го"));
+                                                reasonkick = (String.Format(" Reason: Privat rank above 30"));
                                                 needkicknahelb = true;
                                             }
                                             if (wins >= 300)
                                             {
                                                 writenahlebstofile(steamid);
                                                 istherenahlebs = true;
-                                                reasonkick = (String.Format(" Причина: Побед больше 300"));
+                                                reasonkick = (String.Format(" Reason: Wins above 300"));
                                                 needkicknahelb = true;
                                             }
                                             if (needkicknahelb == true)
@@ -1396,27 +1396,27 @@ namespace GodnestCSGOTool
                                                 if (needcrashowner != true)
                                                 {
                                                     KickMsg();
-                                                    InviteMessage("Кикнут нахлебник:" + (steamid + 76561197960265728) + reasonkick);
+                                                    InviteMessage("Kicked freeloader:" + (steamid + 76561197960265728) + reasonkick);
                                                 }
                                                 else
                                                 {
-                                                    InviteMessage("Я бы тебя кикнул:" + (steamid + 76561197960265728) + ",но все раво владелец нахлеб, можешь не хоходить в беседку." + reasonkick);
+                                                    InviteMessage("I kicked you:" + (steamid + 76561197960265728) + ", anyway creator - freeloader, don't joint plz." + reasonkick);
                                                 }
                                                 needkicknahelb = false;
                                             }
                                         }
                                         else
                                         {
-                                            InviteMessage(String.Format("У вас есть ЦАРЬ в лобби:" + (steamid + 76561197960265728) + " не обижайте его :3"));
+                                            InviteMessage(String.Format("You have LORD in lobby: " + (steamid + 76561197960265728)));
                                         }
                                     }
                                 }
                             }
                             if (needcrashowner == true)
                             {
-                                lobby.statusteam = "Тапнул лобби!";
-                                InviteMessage(String.Format("Владелец лобби нахлебник, причина:" + reasoncrashowner));
-                                InviteMessage(String.Format("Лобби будет сломано, да, вы его не кикнете, тапаю лобби..."));
+                                lobby.statusteam = "Tapped lobby!";
+                                InviteMessage(String.Format("Creator of lobby - freeloader, reason: " + reasoncrashowner));
+                                InviteMessage(String.Format("Lobby will crashed, yes, u can't kick him, tapping lobby..."));
                                 needdofakebot(resp.Body.steam_id_lobby);
                                 //for (int i = 0; i <= 200; i++)
                                 //{
@@ -1430,30 +1430,30 @@ namespace GodnestCSGOTool
                                     if (members == 6)
                                     {
                                         checkedlobys = checkedlobys + resp.Body.steam_id_lobby;
-                                        lobby.statusteam = "Годное лобби!";
-                                        InviteMessage(String.Format("Вы можете скачать SteamID64 игроков беседок с [censored].xyz!"));
-                                        InviteMessage(String.Format("В вашем лобби нет нахлебников, но если кто то зайдет или выйдет, я проверю снова!"));
-                                        InviteMessage(String.Format("Желаем удачного ХвХ!"));
+                                        lobby.statusteam = "Good lobby!";
+                                        InviteMessage(String.Format("You can download list of lobbies from [censored].xyz!"));
+                                        InviteMessage(String.Format("You have no freeloaders in this lobby, but if someone join/leave, i will check!"));
+                                        InviteMessage(String.Format("Have fun!"));
                                     }
                                     else
                                     {
-                                        lobby.statusteam = "Кикнул бомжей!";
-                                        InviteMessage(String.Format("Вы можете скачать SteamID64 игроков беседок с [censored].xyz!"));
-                                        InviteMessage(String.Format("В вашем лобби были нахлебники, но нечего, мы их кикнули!"));
-                                        InviteMessage(String.Format("Я зайду к вам снова когда у вас будет 5 игроков"));
+                                        lobby.statusteam = "Kicked bum!";
+                                        InviteMessage(String.Format("You can download list of lobbies from [censored].xyz!"));
+                                        InviteMessage(String.Format("There is freeloader in this lobby! Don't worry, i will kick him!"));
+                                        InviteMessage(String.Format("I will join again when you will have 5 players!"));
                                     }
                                 }
                                 else
                                 {
-                                    lobby.statusteam = "Кикнул бомжей!";
-                                    InviteMessage(String.Format("Вы можете скачать SteamID64 игроков беседок с [censored].xyz!"));
-                                    InviteMessage(String.Format("В вашем лобби были нахлебники, но нечего, мы их кикнули!"));
-                                    InviteMessage(String.Format("Я зайду к вам снова когда у вас будет 5 игроков"));
+                                    lobby.statusteam = "Kicked bum!";
+                                    InviteMessage(String.Format("You can download list of lobbies from [censored].xyz!"));
+                                    InviteMessage(String.Format("There is freeloader in this lobby! Don't worry, i will kick him!"));
+                                    InviteMessage(String.Format("I will join again when you will have 5 players!"));
                                 }
                             }
                             if (needcrashowner != true)
                             {
-                                lobby.statusteam = "Проверенно:" + resp.Body.steam_id_lobby;
+                                lobby.statusteam = "Checked:" + resp.Body.steam_id_lobby;
                                 LeaveLobby(resp.Body.steam_id_lobby);
                                 imdone = true;
                             }
