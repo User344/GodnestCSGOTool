@@ -3,9 +3,9 @@ lobby bots full source code
 
 # Dependency
 
-Mail.dll
-MaterialSkin
-Newtonsoft.Json
-protobuf-net
-SteamAuth
-SteamKit2
+Mail.dll <br />
+MaterialSkin <br />
+Newtonsoft.Json <br />
+protobuf-net <br />
+SteamAuth <br />
+SteamKit2 <br />
