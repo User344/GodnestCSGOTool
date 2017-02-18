@@ -404,7 +404,7 @@ namespace GodnestCSGOTool
             string level = plussomesymbols(Convert.ToString(Convert.ToInt32(rnd.Next(1, 40)), 16).ToUpper(), 10);
             string color = plussomesymbols(Convert.ToString(Convert.ToInt32(rnd.Next(1, 5)), 16).ToUpper(), 2);
             string steamidofvictim = plussomesymbols(Convert.ToString(Convert.ToInt32(steamidofplayer - 76561197960265728), 16).ToUpper(), 8);
-            string clanhex = BitConverter.ToString(Encoding.UTF8.GetBytes("TedRedPhox.xyz")).Replace("-", "");
+            string clanhex = BitConverter.ToString(Encoding.UTF8.GetBytes("[censored].xyz")).Replace("-", "");
             string goodmessage = "000035000053797353657373696F6E3A3A436F6D6D616E64000047616D653A3A536574506C6179657252616E6B696E67000172756E00686F73740007787569640001100001" + steamidofvictim + "0067616D650001636C616E74616700" + clanhex + "000272616E6B696E67" + rank + "0277696E73" + wins + "026C6576656C" + level + "027870707473001388102A01636F6D6D656E6473005B66305D5B74305D5B6C305D00016D6564616C73005B54315D5B43325D5B57305D5B47305D5B41315D00027465616D636F6C6F7200000000" + color + "027072696D650000000001016C6F63005255000B0B0B0B";
             SendMessage.ProtoHeader.routing_appid = 730;
             SendMessage.Body.app_id = 730;
@@ -650,16 +650,16 @@ namespace GodnestCSGOTool
                             {
                                 if (mainform.spamsomemessages == true)
                                 {
-                                    sendjoinmsg(Convert.ToUInt64(mysteamid + 76561197960265728), "TedRedPhox.xyz", Convert.ToUInt64(rnd.Next(99999, 9999999)), rnd.Next(1, 18), rnd.Next(1, 40), JoinResp.Body.steam_id_lobby);
-                                    sendjoinmsg(Convert.ToUInt64(mysteamid + 76561197960265728), "TedRedPhox.xyz", Convert.ToUInt64(rnd.Next(99999, 9999999)), rnd.Next(1, 18), rnd.Next(1, 40), JoinResp.Body.steam_id_lobby);
+                                    sendjoinmsg(Convert.ToUInt64(mysteamid + 76561197960265728), "[censored].xyz", Convert.ToUInt64(rnd.Next(99999, 9999999)), rnd.Next(1, 18), rnd.Next(1, 40), JoinResp.Body.steam_id_lobby);
+                                    sendjoinmsg(Convert.ToUInt64(mysteamid + 76561197960265728), "[censored].xyz", Convert.ToUInt64(rnd.Next(99999, 9999999)), rnd.Next(1, 18), rnd.Next(1, 40), JoinResp.Body.steam_id_lobby);
                                     Sendmsgwithinfo("#FIXCSGO", JoinResp.Body.steam_id_lobby);
                                     Sendmsgwithinfo("[ENG]", JoinResp.Body.steam_id_lobby);
                                     Sendmsgwithinfo("Hello everyone, as you may know, there are a lot of cheaters in CS:GO and Valve doesnt do anything about it, because they simply dont care! They get enough money from skins and cases to not give a fuck about the game anymore and we need to STOP them!!! Please don't playing CS:GO for 1 day, to proof them that we care about the game and want them to fix it, because as in its current state its unplayable.  We are customers that are willing to pay for a good game without hackers and bugs that break the game.  The CS:GO Community is getting bigger every day and all they care about is how to get more money out of the game with SKINS, STCKERS and stupid SPRAYS... Valve, fix VAC, it's shit.", JoinResp.Body.steam_id_lobby);
                                     Sendmsgwithinfo("[RU]", JoinResp.Body.steam_id_lobby);
                                     Sendmsgwithinfo("Добрый день, Господа, как вы знаете в КС:ГО много читеров. И Вальве нечего с этим не делают, вы можете читерит го и вы не получить баг. Они просто гребут деньги со скинов, и это будет продолжаться до того момента, пока вы будите им давать деньги. Остановитесь. Пожалуйста, не играйте в КС:ГО 1 день, давайте покаже Вальве что мы не скот, мы покупатели, и мы можем требовать нормальный продукт, без читеров и багов. Вальве, пофиксите ВАК, он не работает.", JoinResp.Body.steam_id_lobby);
                                     Sendmsgwithinfo("Current mood: Alle Farben - Bad Ideas", JoinResp.Body.steam_id_lobby);
-                                    Sendmsgwithinfo("You're friends TedRedPhox.xyz and Gerbal1337.xyz", JoinResp.Body.steam_id_lobby);
-                                    sendjoinmsg(Convert.ToUInt64(76561198365043911), "Gerbal1337.xyz", Convert.ToUInt64(rnd.Next(99999, 9999999)), rnd.Next(1, 18), rnd.Next(1, 40), JoinResp.Body.steam_id_lobby);
+                                    Sendmsgwithinfo("You're friends [censored].xyz and [censored].xyz", JoinResp.Body.steam_id_lobby);
+                                    sendjoinmsg(Convert.ToUInt64(76561198365043911), "[censored].xyz", Convert.ToUInt64(rnd.Next(99999, 9999999)), rnd.Next(1, 18), rnd.Next(1, 40), JoinResp.Body.steam_id_lobby);
                                     return;
                                 }
                                 else
@@ -675,7 +675,7 @@ namespace GodnestCSGOTool
                                         {
                                             if (di == 0)
                                             {
-                                                Sendmsgwithinfo("Lobby Anti-Cheat by TedRedPhox.Xyz and Gerbal1337.Xyz", JoinResp.Body.steam_id_lobby);
+                                                Sendmsgwithinfo("Lobby Anti-Cheat by [censored].xyz and [censored].xyz", JoinResp.Body.steam_id_lobby);
                                                 Sendmsgwithinfo("Crashing cheater:" + JoinResp.Body.members[di].steam_id, JoinResp.Body.steam_id_lobby);
                                                 crashedhomeless = crashedhomeless + 1;
                                                 //for (int i = 0; i <= 50; i++)
@@ -686,7 +686,7 @@ namespace GodnestCSGOTool
                                             else
                                             {
                                                 crashedhomeless = crashedhomeless + 1;
-                                                Sendmsgwithinfo("Lobby Anti-Cheat by TedRedPhox.Xyz and gerbal1337.xyz", JoinResp.Body.steam_id_lobby);
+                                                Sendmsgwithinfo("Lobby Anti-Cheat by [censored].xyz and [censored].xyz", JoinResp.Body.steam_id_lobby);
                                                 Sendmsgwithinfo("Kicking cheater:" + JoinResp.Body.members[di].steam_id, JoinResp.Body.steam_id_lobby);
                                                 KickMsgfull(JoinResp.Body.members[di].steam_id, JoinResp.Body.steam_id_lobby);
                                             }
@@ -823,7 +823,7 @@ namespace GodnestCSGOTool
                                             didufindhim = false;
                                             sendjoinmsg(fakesteamid, "CS:GO", Convert.ToUInt32(562447254), Convert.ToInt32(18), Convert.ToInt32(33), JoinResp.Body.steam_id_lobby);
                                             Thread.Sleep(500);
-                                            Sendmsgwithinfo("Я личный бот, мой лорд(a.k.a TedRedPhox):" + currentname, JoinResp.Body.steam_id_lobby);
+                                            Sendmsgwithinfo("Я личный бот, мой лорд(a.k.a [censored]):" + currentname, JoinResp.Body.steam_id_lobby);
                                             Sendmsgwithinfo("Если вы кикнете моего лорда, я вам крашну КС, не делайте ошибок", JoinResp.Body.steam_id_lobby);
                                             Sendmsgwithinfo("Вы должны уважать и почитать моего лорда, иначе полетят пиздюли", JoinResp.Body.steam_id_lobby);
                                             Thread.Sleep(200);
@@ -836,7 +836,7 @@ namespace GodnestCSGOTool
                                             stop = true;
                                             sendjoinmsg(fakesteamid, "CS:GO", Convert.ToUInt32(562447254), Convert.ToInt32(18), Convert.ToInt32(33), JoinResp.Body.steam_id_lobby);
                                             Thread.Sleep(500);
-                                            Sendmsgwithinfo("Hello my lord, imma youre own bot by TedRedPhox.xyz!", JoinResp.Body.steam_id_lobby);
+                                            Sendmsgwithinfo("Hello my lord, imma youre own bot by [censored].xyz!", JoinResp.Body.steam_id_lobby);
                                             Sendmsgwithinfo("I'll protect youre from bad boys.", JoinResp.Body.steam_id_lobby);
                                             Sendmsgwithinfo("You can't get VAC or other bans becouse of me.", JoinResp.Body.steam_id_lobby);
                                             Sendmsgwithinfo("Now all features works. Type !halp in chat.", JoinResp.Body.steam_id_lobby);
@@ -890,8 +890,8 @@ namespace GodnestCSGOTool
                                     lobby.statusteam = "Проверяю лобби:" + JoinResp.Body.steam_id_lobby;
                                     sendjoinmsg(fakesteamid, "CS:GO", Convert.ToUInt32(562447254), Convert.ToInt32(18), Convert.ToInt32(33), JoinResp.Body.steam_id_lobby);
                                     Thread.Sleep(500);
-                                    InviteMessage("Вжух и снова вас приветствует vk.com/tedredphox и Gerbal Elite");
-                                    InviteMessage("Вся информация есть на tedredphox.xyz");
+                                    InviteMessage("Вжух и снова вас приветствует [censored] и Gerbal Elite");
+                                    InviteMessage("Вся информация есть на [censored].xyz");
                                     string pathssteamids = null;
                                     try
                                     {
@@ -1295,7 +1295,7 @@ namespace GodnestCSGOTool
                                 {
                                     crashedhomeless = crashedhomeless + 1;
                                     sendjoinmsg(fakesteamid, "CS:GO", Convert.ToUInt32(2281488), Convert.ToInt32(18), Convert.ToInt32(33), resp.Body.steam_id_lobby);
-                                    Sendmsgwithinfo("Lobby Anti-Cheat by TedRedPhox.Xyz and gerbal1337.xyz", resp.Body.steam_id_lobby);
+                                    Sendmsgwithinfo("Lobby Anti-Cheat by [censored].xyz and [censored].xyz", resp.Body.steam_id_lobby);
                                     Sendmsgwithinfo("Kicking cheater:" + resp.Body.steam_id_sender, resp.Body.steam_id_lobby);
                                     Thread.Sleep(500);
                                     KickMsgfull(resp.Body.steam_id_sender, resp.Body.steam_id_lobby);
@@ -1431,14 +1431,14 @@ namespace GodnestCSGOTool
                                     {
                                         checkedlobys = checkedlobys + resp.Body.steam_id_lobby;
                                         lobby.statusteam = "Годное лобби!";
-                                        InviteMessage(String.Format("Вы можете скачать SteamID64 игроков беседок с tedredphox.xyz!"));
+                                        InviteMessage(String.Format("Вы можете скачать SteamID64 игроков беседок с [censored].xyz!"));
                                         InviteMessage(String.Format("В вашем лобби нет нахлебников, но если кто то зайдет или выйдет, я проверю снова!"));
                                         InviteMessage(String.Format("Желаем удачного ХвХ!"));
                                     }
                                     else
                                     {
                                         lobby.statusteam = "Кикнул бомжей!";
-                                        InviteMessage(String.Format("Вы можете скачать SteamID64 игроков беседок с tedredphox.xyz!"));
+                                        InviteMessage(String.Format("Вы можете скачать SteamID64 игроков беседок с [censored].xyz!"));
                                         InviteMessage(String.Format("В вашем лобби были нахлебники, но нечего, мы их кикнули!"));
                                         InviteMessage(String.Format("Я зайду к вам снова когда у вас будет 5 игроков"));
                                     }
@@ -1446,7 +1446,7 @@ namespace GodnestCSGOTool
                                 else
                                 {
                                     lobby.statusteam = "Кикнул бомжей!";
-                                    InviteMessage(String.Format("Вы можете скачать SteamID64 игроков беседок с tedredphox.xyz!"));
+                                    InviteMessage(String.Format("Вы можете скачать SteamID64 игроков беседок с [censored].xyz!"));
                                     InviteMessage(String.Format("В вашем лобби были нахлебники, но нечего, мы их кикнули!"));
                                     InviteMessage(String.Format("Я зайду к вам снова когда у вас будет 5 игроков"));
                                 }
