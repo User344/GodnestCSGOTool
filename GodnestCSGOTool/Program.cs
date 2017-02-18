@@ -8,6 +8,7 @@ namespace GodnestCSGOTool
 {
     static class Program
     {
+        // hi
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
