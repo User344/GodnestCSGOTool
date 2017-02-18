@@ -1,3 +1,6 @@
+# RIP 2/18/2017
+<br />
+<br />
 # GodnestCSGOTool
 lobby bots full source code
 
